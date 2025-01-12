@@ -22,6 +22,7 @@ func TestMainHandlerWhenCountMoreThanTotal(t *testing.T) {
 	list := strings.Split(body, ",")
 
 	assert.Equal(t, len(list), totalCount)
+	assert.LessOrEqual(t, t, totalCount)
 
 	status := responseRecorder.Code
 
